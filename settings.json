@@ -1,15 +1,74 @@
 {
+  // open json editor for settings
+  // "workbench.settings.editor": "json",
+
+  // Theme
+  "workbench.colorTheme": "Nyctophilia",
+  "workbench.iconTheme": "moxer-icons",
+
+  // Change font
+  "editor.fontFamily": "Dank Mono",
+  "scm.inputFontFamily": "Dank Mono",
+  "terminal.integrated.fontFamily": "Dank Mono",
+  "chat.editor.fontFamily": "Dank Mono",
+  "debug.console.fontFamily": "Dank Mono",
+  "editor.codeLensFontFamily": "Dank Mono",
+  "notebook.output.fontFamily": "Dank Mono",
+  "markdown.preview.fontFamily": "Dank Mono",
+  "editor.inlayHints.fontFamily": "Dank Mono",
+
+  // Font size
+  "editor.fontSize": 19,
+  "terminal.integrated.fontSize": 16,
+
+  // ui
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+
+  // APC
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 38
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 12,
+      "y": 10
+    }
+  },
+  "apc.font.family": "Dank Mono",
+  "apc.monospace.font.family": "Dank Mono",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 12
+  },
+
+  // Custom css
+  "apc.stylesheet": {
+    ".sidebar > .composite": "height: 12px !important",
+    ".title-label": "display: none !important",
+    ".title-actions": "display: none !important",
+    ".tabs-and-actions-container > .editor-actions": "display: none !important",
+    ".titlebar-center": "display: none !important",
+    ".titlebar-right": "display: none !important",
+    ".inline-tabs-placeholder": "display: none !important",
+    ".split-view-view .visible": "background-color: #110f17 !important"
+  },
+
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
+
+  // Color Theme Customization
   "workbench.colorCustomizations": {
-    "minimap.background": "#00000000",
-    "scrollbar.shadow": "#00000000",
-    "[Material Theme Ocean High Contrast]": {
+    "[Nyctophilia]": {
       "activityBarBadge.background": "#C6FF00",
       "activityBar.activeBorder": "#C6FF00",
-      "list.activeSelectionForeground": "#C6FF00",
-      "list.inactiveSelectionForeground": "#C6FF00",
-      "list.highlightForeground": "#C6FF00",
       "scrollbarSlider.activeBackground": "#C6FF0050",
       "editorSuggestWidget.highlightForeground": "#C6FF00",
       "textLink.foreground": "#C6FF00",
@@ -30,130 +89,58 @@
       "statusBarItem.remoteBackground": "#C6FF00"
     }
   },
-  "tabnine.experimentalAutoImports": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "name": "One Dark italic",
-        "scope": [
-          "comment",
-          "entity.other.attribute-name",
-          "keyword",
-          "markup.underline.link",
-          "storage.modifier",
-          "storage.type",
-          "string.url",
-          "variable.language.super",
-          "variable.language.this"
-        ],
-        "settings": {
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "name": "One Dark italic reset",
-        "scope": [
-          "keyword.operator",
-          "keyword.other.type",
-          "storage.modifier.import",
-          "storage.modifier.package",
-          "storage.type.built-in",
-          "storage.type.function.arrow",
-          "storage.type.generic",
-          "storage.type.java",
-          "storage.type.primitive"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  },
-  "editor.fontSize": 18,
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontSize": 16,
+
+  // Misc
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "editor.tabSize": 2,
   "editor.linkedEditing": true,
-  "workbench.colorTheme": "Night Owl",
+  "breadcrumbs.filePath": "off",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "window.zoomLevel": 0.75,
+
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
     "javascript": "node",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "zig": "zig run",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
     "python": "clear && python3 -u",
-    "perl": "perl",
-    "perl6": "perl6",
-    "ruby": "ruby",
     "go": "go run",
-    "lua": "lua",
-    "groovy": "groovy",
     "powershell": "powershell -ExecutionPolicy ByPass -File",
-    "bat": "cmd /c",
     "shellscript": "bash",
-    "fsharp": "fsi",
     "csharp": "scriptcs",
-    "vbscript": "cscript //Nologo",
     "typescript": "ts-node",
-    "coffeescript": "coffee",
-    "scala": "scala",
-    "swift": "swift",
-    "julia": "julia",
-    "crystal": "crystal",
-    "ocaml": "ocaml",
-    "r": "Rscript",
-    "applescript": "osascript",
     "clojure": "lein exec",
-    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
     "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-    "racket": "racket",
-    "scheme": "csi -script",
-    "ahk": "autohotkey",
-    "autoit": "autoit3",
-    "dart": "dart",
-    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    "haskell": "runghc",
-    "nim": "nim compile --verbosity:0 --hints:off --run",
-    "lisp": "sbcl --script",
-    "kit": "kitc --run",
-    "v": "v run",
     "sass": "sass --style expanded",
-    "scss": "scss --style expanded",
-    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "sml": "cd $dir && sml $fileName"
+    "scss": "scss --style expanded"
   },
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
-  "aws.suppressPrompts": {
-    "codeWhispererConnectionExpired": true
-  },
+  "liveServer.settings.useWebExt": true,
   "php.suggest.basic": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "git.openRepositoryInParentFolders": "never",
   "editor.lineHeight": 0,
-  "cSpell.userWords": ["manhwas"],
+  "cSpell.userWords": ["lerp", "manhwas", "Nyctophilia", "Rigidbody"],
   "livePreview.notifyOnOpenLooseFile": false,
   "files.autoSave": "afterDelay",
-  "window.zoomLevel": 1,
-  "liveServer.settings.useWebExt": true,
-  "php.validate.enable": true,
-  "php.completion.parameters": "parentheses",
-  "php.executablePath": "/usr/local/opt/php/bin/php",
-  "php.executables": {
-    "php": "/usr/bin/php",
-    "php7": "/usr/bin/php7.4"
-  },
-  "editor.bracketPairColorization.enabled": true,
-  "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+
+  // Git
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "workbench.settings.applyToAllProfiles": [],
+
+  //prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": false,
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.env.osx": {}
 }
