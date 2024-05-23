@@ -1,0 +1,236 @@
+{
+    // open json editor for settings
+    // "workbench.settings.editor": "json",
+
+    // Theme
+    "workbench.colorTheme": "Nyctophilia",
+    "workbench.iconTheme": "moxer-icons",
+
+    // Change font
+    "editor.fontFamily": "Geist Mono",
+    "scm.inputFontFamily": "Geist Mono",
+    "terminal.integrated.fontFamily": "JetBrainsMono NF",
+    "chat.editor.fontFamily": "Geist Mono",
+    "debug.console.fontFamily": "Geist Mono",
+    "editor.codeLensFontFamily": "Geist Mono",
+    "notebook.output.fontFamily": "Geist Mono",
+    "markdown.preview.fontFamily": "Geist Mono",
+    "editor.inlayHints.fontFamily": "Geist Mono",
+    "terminal.integrated.fontSize": 17,
+
+    // ui
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "editor.scrollbar.vertical": "auto",
+    "window.titleBarStyle": "custom",
+    "editor.scrollbar.horizontal": "auto",
+    // "editor.lineNumbers": "relative", // absolute
+    "editor.snippetSuggestions": "top",
+    "editor.inlineSuggest.enabled": true,
+
+    // Color Theme Customization
+    "workbench.colorCustomizations": {
+        "[Nyctophilia]": {
+            "activityBarBadge.background": "#C6FF00",
+            "activityBar.activeBorder": "#C6FF00",
+            "scrollbarSlider.activeBackground": "#C6FF0050",
+            "editorSuggestWidget.highlightForeground": "#C6FF00",
+            "textLink.foreground": "#C6FF00",
+            "progressBar.background": "#C6FF00",
+            "pickerGroup.foreground": "#C6FF00",
+            "tab.activeBorder": "#C6FF00",
+            "notificationLink.foreground": "#C6FF00",
+            "editorWidget.resizeBorder": "#C6FF00",
+            "editorWidget.border": "#C6FF00",
+            "settings.modifiedItemIndicator": "#C6FF00",
+            "settings.headerForeground": "#C6FF00",
+            "panelTitle.activeBorder": "#C6FF00",
+            "breadcrumb.activeSelectionForeground": "#C6FF00",
+            "menu.selectionForeground": "#C6FF00",
+            "menubar.selectionForeground": "#C6FF00",
+            "editor.findMatchBorder": "#C6FF00",
+            "selection.background": "#C6FF0040",
+            "statusBarItem.remoteBackground": "#C6FF00"
+        },
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    },
+
+    // Misc
+    "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
+    "editor.tabSize": 4,
+    "editor.linkedEditing": true,
+    "breadcrumbs.filePath": "off",
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": false,
+
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "php": "php",
+        "python": "clear && python3 -u",
+        "go": "go run",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "shellscript": "bash",
+        "csharp": "scriptcs",
+        "typescript": "ts-node",
+        "clojure": "lein exec",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.useWebExt": true,
+    "php.suggest.basic": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "git.openRepositoryInParentFolders": "never",
+    "cSpell.userWords": [
+        "abhie",
+        "Abhiraj",
+        "Ajin",
+        "CGPA",
+        "Chaudhuri",
+        "hotpdf",
+        "lerp",
+        "manhwas",
+        "neovim",
+        "nvim",
+        "Nyctophilia",
+        "pdfplumber",
+        "Rigidbody",
+        "tauri"
+    ],
+    "livePreview.notifyOnOpenLooseFile": false,
+    "files.autoSave": "afterDelay",
+
+    // Git
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "workbench.settings.applyToAllProfiles": [],
+    "window.zoomLevel": 1,
+
+    //prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.jsxSingleQuote": true,
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.env.osx": {},
+    "console-ninja.featureSet": "Community",
+    "prettier.endOfLine": "auto",
+    "prettier.tabWidth": 4,
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-server-extension": true
+    },
+    "python.analysis.autoFormatStrings": true,
+    "[python]": {
+        "editor.defaultFormatter": null
+    },
+    "explorer.confirmPasteNative": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "none",
+
+    //Vim
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Navigation
+        // switch b/w buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+        // splits
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // panes
+        {
+            "before": ["leader", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["leader", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["leader", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["leader", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        // NICE TO HAVE
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "x"], "commands": [":x!"] },
+        {
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["leader", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["leader", "p"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        // toggle comment selection
+        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "extensions.ignoreRecommendations": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [80],
+        "editor.selectionHighlight": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "dart.flutterSdkPath": "/Users/abhiraj/Development/flutter",
+    "terminal.integrated.inheritEnv": false,
+    "editor.lineHeight": 0,
+    "editor.fontSize": 20,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "editor.stickyScroll.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "prettier.singleQuote": true
+}
